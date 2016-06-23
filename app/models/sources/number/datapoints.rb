@@ -33,7 +33,10 @@ module Sources
       end
 
       def sum(values)
-        values.inject(0, &:+)
+        nums = values.select do |elem|
+            not elem.is_a?(String)
+        end
+        nums.inject(0, &:+)
       end
 
       def calculate_result(values)
