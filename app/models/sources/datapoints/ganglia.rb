@@ -63,7 +63,7 @@ module Sources
       private
 
       def url_builder
-        @url_builder ||= GangliaUrlBuilder.new(cc(:plugins).ganglia.url)
+        @url_builder ||= GangliaUrlBuilder.new(cc(:plugins).ganglia.url, cc(:plugins))
       end
 
       def parse_targets(xml)
