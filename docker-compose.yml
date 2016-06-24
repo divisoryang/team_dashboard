@@ -1,0 +1,12 @@
+version: "2"
+services:
+    team_dashboard:
+        restart: always
+        image: team_dashboard
+        volumes:
+            - /workspace/team_dashboard/config/database.yml:/team_dashboard/config/database.yml
+            - /workspace/team_dashboard/config/plugins.yml:/team_dashboard/config/plugins.yml
+        ports:
+            - "3000:3000"
+
+# docker run -i -t -v /workspace/team_dashboard/config/database.yml:/team_dashboard/config/database.yml -v /workspace/team_dashboard/config/plugins.yml:/team_dashboard/config/plugins.yml -p 3000:3000 --entrypoint /bin/bash team_dashboard 
