@@ -12,6 +12,10 @@ development:
     url: 'http://ganglia_url'
     host: ganglia_host
 
+
+  ganglia_product2:
+    url: 'http://ganglia.product2.com:8181/ganglia'
+
   pingdom:
     user: username
     password: pass
